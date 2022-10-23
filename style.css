@@ -154,6 +154,10 @@ p.sub-header {
   margin: 0 0 26px;
 }
 
+.page-hero img {
+  max-width: 360px;
+}
+
 @media (max-width: 799px) {
   .page-hero {
     flex-direction: column;
@@ -239,10 +243,14 @@ p.sub-header {
 }
 
 .workflows .cycle .cycle-step {
-  filter: blur(3px);
   transition: filter ease-in 200ms;
   cursor: pointer;
 }
+
+.workflows .cycle:hover .cycle-step {
+  filter: blur(3px);
+}
+
 .workflows .cycle .cycle-step:hover {
   filter: none;
 }
@@ -752,6 +760,111 @@ form.subscribe button:hover {
     flex-direction: column;
   }
   .footer .text {
+    width: 100%;
+  }
+}
+
+/* NEWS LIST BLOCK ON PRESS PAGE */
+.news-list {
+  padding: 16px 15px 70px;
+}
+
+.news-list h2 {
+  margin-bottom: 50px;
+}
+
+.news-list .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 27px;
+}
+
+.news-list .news-item {
+  width: calc(25% - 27px);
+  box-sizing: border-box;
+  margin: 0 0 32px;
+}
+
+.news-list .news-item a {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+.news-list .news-item a:hover {
+  color: #9775fa;
+}
+
+.news-list .news-item span {
+  display: block;
+  margin: 22px 0 0;
+}
+
+@media (max-width: 799px) {
+  .news-list .content {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .news-list .news-item {
+    width: 100%;
+  }
+  .news-list .news-item a {
+    font-size: 18px;
+  }
+}
+
+/* MEET OUR TEAM BLOCK */
+.team h2 {
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+.team .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.team .team-member {
+  width: calc(33% - 60px);
+  margin: 0 0 60px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.team .team-member img {
+  display: block;
+  width: 190px;
+  margin: 0 auto 32px;
+  border-radius: 100%;
+}
+
+.team .name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.team .position {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  margin: 32px 0;
+}
+
+@media (max-width: 799px) {
+  .team .content {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .team .team-member {
     width: 100%;
   }
 }
