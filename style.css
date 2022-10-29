@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  transition: all ease-in-out 150ms;
+  transition: color ease-in-out 150ms;
   color: #b982ff;
   text-decoration: none;
 }
